@@ -1,0 +1,118 @@
+body {
+  width: 1000px;
+  margin: auto;
+  align-content: center;
+  background-color: #E0E8D9;
+}
+
+header, footer{
+    background-color: #597458;
+    padding: 10px;
+    margin-top: 10px; 
+    margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+  color: #CEA95C;
+}
+
+h1, h2 {
+    font-family: 'Marcellus', serif;
+}
+
+h2, h3, p {
+    font-family: 'Blinker', sans-serif;
+    color: #597458
+}
+
+footer p {
+  color: #CEA95C;
+}
+
+.tyoExp {
+  text-align: left;
+}
+
+.headerTitle {
+    text-align: center;
+}
+
+nav {
+    background-color:#9DC6A0;
+    padding: 1px;
+    margin-bottom: 5px;
+}
+
+p {
+  color: #192914;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    border: 1px #597458;
+}
+
+li {
+    flex: 1 1 100%;
+}
+
+li a {
+    text-decoration: none;
+    color: #597458;
+}
+
+a:hover {
+    color: #E0E8D9 ;
+}
+
+main {
+    margin: 0px 5px;
+   
+}
+
+.ImgContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.primary, .secondary, .accent1, .accent2, .accent3 {
+    border: gray;
+    border-style: solid;
+    color: black;
+}
+
+.primary {
+    background-color:#E0E8D9;
+}
+  
+.secondary {
+    background-color: #192914;
+    color: white;
+}
+  
+.accent1 {
+    background-color: #9DC6A0;
+}
+  
+.accent2{
+    background-color: #CEA95C;
+}
+
+.accent3{
+    background-color: #597458;
+}
+
+table, th, td {
+    border: 1px solid gray;
+    padding: 15px;
+    margin: 10px;
+    background-color: #FFF7E1;
+}
+
+table {
+    margin: auto;
+}
+
