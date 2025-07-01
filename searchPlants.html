@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Things Green | Plant Search</title>
+    <link href="./styles/style.css" rel="stylesheet" />
+    <script src="./js/searchPlants.js" type="module"></script>
+  </head>
+  <body>
+    <header class="divider" id="main-header"></header>
+
+    <main class="divider">
+      <h1 class="speciesHeader">Search Plants</h1>
+      <div class="search-container">
+        <input
+          type="text"
+          id="plant-search"
+          placeholder="Search by common name..."
+          aria-label="Search plants by common name"
+        />
+        <button id="search-button">Search</button>
+      </div>
+      <div id="search-results" class="plantSpecies">
+        <p class="search-instructions">
+          Enter a plant name to begin your search
+        </p>
+      </div>
+    </main>
+
+    <footer id="main-footer"></footer>
+  </body>
+</html>
