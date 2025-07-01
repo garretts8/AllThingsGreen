@@ -69,6 +69,11 @@ export async function loadHeaderFooter() {
 
     await renderWithTemplate(headerTemplateFn, headerElement);
     await renderWithTemplate(footerTemplateFn, footerElement);
+    
+    // Import and update auth UI after header is loaded
+    const { updateAuthUI, setupLogout } = await import('./auth.mjs');
+    updateAuthUI();
+    setupLogout();
   } catch (error) {
     console.error("Failed to load header/footer:", error);
   }
