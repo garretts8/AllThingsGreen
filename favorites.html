@@ -3,14 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All Things Green | Home</title>
+    <title>All Things Green | Favorites</title>
     <link href="./styles/style.css" rel="stylesheet" />
-    <script src="./js/main.js" type="module"></script>
+    <script src="./js/favorites.js" type="module"></script>
   </head>
   <body>
     <header class="divider" id="main-header"></header>
 
-    <main></main>
+    <main class="divider">
+      <h1>Your Favorite Plants</h1>
+      <div id="favorites-container" class="plant-grid"></div>
+      <div id="no-favorites-message" style="display: none">
+        <p>You haven't added any plants to your favorites yet.</p>
+        <a href="plantSpecies.html">Browse plants</a>
+      </div>
+      <div id="login-prompt" style="display: none">
+        <p>Please <a href="login.html">login</a> to view your favorites.</p>
+      </div>
+    </main>
 
     <footer id="main-footer"></footer>
   </body>
