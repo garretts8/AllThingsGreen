@@ -534,3 +534,57 @@ button[type="submit"] {
 #no-favorites-message a:hover, #login-prompt a:hover {
   text-decoration: underline;
 }
+
+/* newsletter.html */
+.newsletter-signup {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.newsletter-signup h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2c662d;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input[readonly] {
+  background-color: #eee;
+}
+
+.newsletter-signup button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2c662d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.newsletter-signup button:hover {
+  background-color: #3e8e41;
+}

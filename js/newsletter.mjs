@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       window.location.href = 'index.html';
     });
   }
-<<<<<<< HEAD
 });
 
 async function saveSubscriber(subscriber) {
@@ -56,18 +55,3 @@ async function saveSubscriber(subscriber) {
     console.error('Error saving subscriber:', error);
   }
 }
-=======
-  
-  // Add export button if needed
-  const exportBtn = document.createElement('button');
-  exportBtn.textContent = 'Export Subscribers';
-  exportBtn.addEventListener('click', exportSubscribersToFile);
-  document.body.appendChild(exportBtn);
-}
-
-document.addEventListener('DOMContentLoaded', async () => {
-  await loadHeaderFooter();
-  updateAuthUI();
-  initNewsletterPage();
-});
->>>>>>> 7755a3fb8b8f793ef95230c8ab168104404004ad
