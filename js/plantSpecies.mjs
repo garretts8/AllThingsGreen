@@ -1,4 +1,4 @@
-// js/plantSpecies.mjs
+import { qs, getLocalStorage, setLocalStorage } from './utils.mjs';
 let currentFilter = "all";
 let currentPage = 1;
 let totalPages = 1;
@@ -33,7 +33,7 @@ export async function fetchPlantSpecies(filter = "all", page = 1) {
 export function displayPlantSpecies(plants, container) {
   container.innerHTML = "";
   
-   if (!plants || plants.length === 0) {
+  if (!plants || plants.length === 0) {
     container.innerHTML = `
       <div class="error-message">
         <p>No plants found matching your criteria.</p>
@@ -50,7 +50,6 @@ export function displayPlantSpecies(plants, container) {
     const plantCard = document.createElement("div");
     plantCard.className = "plant-card";
     
-    // Handle cases where properties might be missing
     const imageUrl = plant.image_url || "";
     const commonName = plant.common_name || "Name not available";
     const scientificName = plant.scientific_name || "Scientific name not available";
@@ -63,6 +62,7 @@ export function displayPlantSpecies(plants, container) {
       <h3>${commonName}</h3>
       <p><strong>Scientific Name:</strong> ${scientificName}</p>
       <p><strong>Family:</strong> ${family}</p>
+      <button class="favorite-btn" data-plant-id="${plant.id}">Add to Favorites</button>
     `;
     
     plantGrid.appendChild(plantCard);
@@ -70,6 +70,39 @@ export function displayPlantSpecies(plants, container) {
   
   container.appendChild(plantGrid);
   addPaginationControls(container);
+  
+  // Add event listeners to favorite buttons
+  document.querySelectorAll('.favorite-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const plantId = button.dataset.plantId;
+      const plant = plants.find(p => p.id == plantId);
+      addToFavorites(plant);
+    });
+  });
+}
+
+function addToFavorites(plant) {
+  const user = getLocalStorage('currentUser');
+  if (!user) {
+    alert('Please login to add favorites');
+    window.location.href = 'login.html';
+    return;
+  }
+  
+  let favorites = getLocalStorage('favorites') || {};
+  if (!favorites[user.username]) {
+    favorites[user.username] = [];
+  }
+  
+  // Check if plant already exists in favorites
+  const exists = favorites[user.username].some(p => p.id === plant.id);
+  if (!exists) {
+    favorites[user.username].push(plant);
+    setLocalStorage('favorites', favorites);
+    alert('Added to favorites!');
+  } else {
+    alert('This plant is already in your favorites!');
+  }
 }
 
 function addPaginationControls(container) {

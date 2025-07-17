@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Things Green | Newsletter Signup</title>
+    <link href="./styles/style.css" rel="stylesheet" />
+    <script src="./js/newsletter.mjs" type="module"></script>
+  </head>
+  <body>
+    <header class="divider" id="main-header"></header>
+
+    <main class="divider">
+      <section class="newsletter-signup">
+        <h2>Complete Your Newsletter Subscription</h2>
+        <form id="newsletter-complete-form">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" readonly required />
+          </div>
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <button type="submit">Complete Subscription</button>
+        </form>
+      </section>
+    </main>
+
+    <footer id="main-footer"></footer>
+  </body>
+</html>
