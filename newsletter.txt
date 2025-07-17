@@ -1,0 +1,1 @@
+API will not allow newsletter info unless it is attached to the API webpage
