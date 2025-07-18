@@ -1,1 +1,2 @@
-API will not allow newsletter info unless it is attached to the API webpage
+API will not allow newsletter info unless it is attached to the API webpage. 
+Newsletter data is currently being save to the downloads folder.

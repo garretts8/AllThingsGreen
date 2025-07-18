@@ -8,6 +8,7 @@ body {
 header, footer{
     background-color: #597458;
     padding: 10px;
+    padding-bottom: 50px;
     margin-top: 10px; 
     margin-bottom: 10px;
 }
@@ -587,4 +588,36 @@ button[type="submit"] {
 
 .newsletter-signup button:hover {
   background-color: #3e8e41;
+}
+
+/* footer.html */
+.socialContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social {
+  display: flex;
+  gap: 10px; /* Adjust the space between icons as needed */
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional: Style for the Site Plan link */
+.socialContainer + a {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+footer a {
+  float: left;
+  color: #CEA95C;
+  text-decoration: none;
+  padding: 3px;
+}
+
+footer a:hover {
+  color: #9DC6A0;
 }

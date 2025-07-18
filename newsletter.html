@@ -13,18 +13,22 @@
     <main class="divider">
       <section class="newsletter-signup">
         <h2>Complete Your Newsletter Subscription</h2>
-        <form id="complete-subscription">
+        <form
+          id="complete-subscription"
+          method="POST"
+          action="save-subscriber.php"
+        >
           <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" readonly />
+            <input type="email" id="email" name="email" readonly />
           </div>
           <div class="form-group">
             <label for="name">Name:</label>
-            <input type="text" id="name" required />
+            <input type="text" id="name" name="name" required />
           </div>
           <div class="form-group">
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" required />
+            <input type="tel" id="phone" name="phone" required />
           </div>
           <button type="submit">Complete Subscription</button>
         </form>
